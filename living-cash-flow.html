@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="盤點台灣家庭每月生活開銷、薪資與被動收入，看看少了薪水後，股息和租金能支應多少生活費。">
+<title>生活現金流檢測表｜保羅所長</title>
+<style>
+:root{color-scheme:light;--ink:#302820;--muted:#66594c;--paper:#f8f3e9;--white:#fffdf8;--line:#e1d6c3;--gold:#7e4e24;--dark:#3d2b1c;--green:#176042;--yellow:#805500;--red:#a02f2a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Noto Sans TC",sans-serif}
+a{color:var(--gold);text-underline-offset:.22em}a:hover{text-decoration-thickness:2px}button,input{font:inherit}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #956231;outline-offset:3px}
+.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}.mast{background:var(--white);border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:66px}.brand{font-size:1.15rem;font-weight:850;color:var(--ink);text-decoration:none}.brand span{color:var(--gold)}
+.hero{margin:28px auto 20px;padding:clamp(25px,5vw,60px);border-radius:26px;background:radial-gradient(ellipse at 90% 0%,#6b4a2d,transparent 62%),var(--dark);color:#fff6e7;display:grid;grid-template-columns:1.25fr 1fr;gap:32px;align-items:center}.eyebrow{margin:0;color:var(--gold);font-size:.76rem;letter-spacing:.13em;font-weight:800}.hero .eyebrow{color:#f1cb98}.hero h1{font-size:clamp(2rem,5.3vw,3.65rem);letter-spacing:-.035em;line-height:1.14;margin:.26em 0}.hero p:not(.eyebrow){max-width:34em;color:#f1dfca}.hero a{margin-top:7px}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center;padding:10px 16px;border:1px solid transparent;border-radius:10px;background:var(--dark);color:white;font-weight:750;text-decoration:none;cursor:pointer}.button:hover{filter:brightness(1.16)}.hero .button{background:#efc896;color:#352314}.outline{background:transparent;border-color:var(--line);color:var(--ink)}.line-button{background:#176042}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:9px}.legend li{display:flex;align-items:center;gap:12px;border:1px solid #ffffff30;background:#ffffff0d;border-radius:12px;padding:9px 13px}.legend b,.legend small{display:block}.legend small{color:#f0d8bb}.dot{height:13px;width:13px;border-radius:50%;flex:none;background:#b6a58d}.dot.red{background:#ff9288}.dot.yellow{background:#ffd26f}.dot.green{background:#7cdbac}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,3vw,26px)}h2,h3,p{margin-block-start:0}h2{line-height:1.28;margin-block-end:8px;font-size:clamp(1.28rem,3vw,1.65rem)}h3{font-size:1rem;margin-block-end:4px}.muted,.note{color:var(--muted)}.note{font-size:.88rem;margin:8px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}.stat{background:#f6eee0;border-radius:12px;padding:13px;min-width:0}.stat b,.stat span{display:block}.stat b{font-size:clamp(1.12rem,3vw,1.55rem);color:var(--gold);font-variant-numeric:tabular-nums}.stat span{font-size:.88rem;color:var(--muted)}.sources{display:flex;flex-wrap:wrap;gap:5px 16px;margin:10px 0 0;font-size:.85rem}
+.workspace{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,1fr);gap:18px;align-items:start;margin-block:20px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:grid;gap:4px;min-width:0}.field label{font-size:.92rem;font-weight:700}.money-input{display:flex;align-items:center;gap:7px;border:1px solid #cfc1a9;border-radius:9px;padding:4px 9px;background:white}.money-input span{font-size:.78rem;color:var(--muted);flex:none}.money-input:focus-within{outline:2px solid var(--gold);outline-offset:1px}.money-input input{width:100%;min-width:0;border:0;background:transparent;color:var(--ink);padding:4px 1px;outline:none}.money-input:has(:invalid){border-color:var(--red)}
+fieldset{min-width:0;margin:18px 0 0;padding:14px 0 0;border:0;border-top:1px solid var(--line)}legend{padding:0 8px 0 0;font-weight:800}.help{font-size:.86rem;color:var(--muted);margin:0 0 10px}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.section-intro{margin-bottom:12px}.result{position:sticky;top:12px;min-width:0}.signal{padding:14px;border-radius:12px;background:#f4eee3;margin:14px 0}.signal b{display:flex;gap:8px;align-items:center}.signal.red{background:#fbeae7;color:var(--red)}.signal.yellow{background:#fff1d0;color:var(--yellow)}.signal.green{background:#e5f3e9;color:var(--green)}.signal p{font-size:.9rem;margin:4px 0 0}.metrics{margin:0}.metrics div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding:7px 0}.metrics dt{font-size:.9rem}.metrics dd{margin:0;text-align:right;font-weight:780;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metrics .negative{color:var(--red)}.metrics .emphasis{font-weight:750}.meter{height:9px;width:100%;accent-color:var(--green);margin-top:7px}.cta{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}.cta p{font-size:.88rem;margin-bottom:9px}.back-results{display:none}.footer{padding:3px 0 28px;font-size:.86rem;color:var(--muted)}details{margin:14px 0 0}summary{cursor:pointer;font-weight:700;font-size:.9rem}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:20px}.workspace{grid-template-columns:1fr}.result{position:static}.back-results{display:inline-flex}}
+@media(max-width:480px){.wrap{width:calc(100% - 24px)}.hero{margin-top:14px;border-radius:17px}.stats{grid-template-columns:1fr;gap:6px}.stat{display:flex;justify-content:space-between;align-items:center;gap:8px}.stat b{flex:none}.fields{gap:10px}.field label{font-size:.87rem}.nav{font-size:.88rem}}
+</style>
+</head>
+<body>
+<header class="mast"><nav class="wrap nav" aria-label="網站導覽"><a class="brand" href="index.html">保羅<span>所長</span></a><a href="index.html">返回資源總覽</a></nav></header>
+<main>
+<section class="wrap hero" aria-labelledby="page-title">
+  <div>
+    <p class="eyebrow">房產現金流研究所 · 家庭試算</p>
+    <h1 id="page-title">生活現金流檢測表</h1>
+    <p>如果下個月沒有薪水，光靠股息、租金和其他被動收入，你家的生活費還差多少？把每月收支填進來，看看現在的結餘和停薪後的缺口。</p>
+    <a class="button" href="#calculator">開始檢測 ↓</a>
+  </div>
+  <ul class="legend" aria-label="被動收入覆蓋率燈號">
+    <li><i class="dot red" aria-hidden="true"></i><div><b>紅燈 · 高度依賴工作收入</b><small>被動收入支應不到 50% 的支出</small></div></li>
+    <li><i class="dot yellow" aria-hidden="true"></i><div><b>黃燈 · 已支應一部分</b><small>被動收入支應 50% 至未滿 100%</small></div></li>
+    <li><i class="dot green" aria-hidden="true"></i><div><b>綠燈 · 目前可支應全額</b><small>被動收入支應 100% 或以上</small></div></li>
+  </ul>
+</section>
+<section class="wrap panel" aria-labelledby="reference">
+  <p class="eyebrow">台灣家庭收支與物價</p>
+  <h2 id="reference">填表前，先看台灣家庭的參考數字</h2>
+  <div class="stats">
+    <div class="stat"><span>2025 每戶可支配所得中位數<br>年額換算每月</span><b>約 8.48 萬元</b></div>
+    <div class="stat"><span>2025 每戶平均消費支出<br>年額換算每月</span><b>約 7.67 萬元</b></div>
+    <div class="stat"><span>2026 年 10 月全國 CPI<br>與上年同月相比</span><b>＋2.33%</b></div>
+  </div>
+  <p class="note">統計以戶為單位，消費支出含自用住宅的設算租金。試算請用你家的實際帳單與還款額。物價年增率反映全國平均變動，各地房租、外食和水電費會有差異。</p>
+  <details><summary>看每戶平均消費支出細項</summary><p class="note">2025 年全台每戶平均，年額換算每月約為：食品及非酒精飲料 11,055 元、餐廳及住宿 10,882 元、水電瓦斯及其他燃料 1,736 元、資通訊 2,852 元。官方分類涵蓋多種品項，例如餐廳及住宿也包含旅宿。</p></details>
+  <div class="sources"><a href="https://www.stat.gov.tw/News_Content.aspx?n=3908&amp;s=236588" target="_blank" rel="noopener noreferrer">主計總處｜114 年家庭收支調查</a><a href="https://www.stat.gov.tw/News_Content.aspx?n=2668&amp;s=236836" target="_blank" rel="noopener noreferrer">主計總處｜115 年 10 月物價指數</a><a href="https://www.itfa.com.tw/news10/464" target="_blank" rel="noopener noreferrer">台灣金融財富重建協會｜家庭收支整理表</a></div>
+</section>
+<div class="wrap workspace">
+  <form class="panel" id="calculator">
+    <p class="eyebrow">01 · 填寫家庭收支</p>
+    <h2>每個月，錢從哪裡來、花到哪裡？</h2>
+    <p class="help section-intro">統一填每月新台幣整數，無此項可留空。雙月帳單 ÷ 2，年繳費用 ÷ 12，三餐可用平均一天餐費 × 30。刷卡消費按原項目填一次，信用卡欄只填另外應還的分期或循環款。</p>
+    <div class="actions"><button class="button outline" id="example" type="button">帶入示例</button><button class="button outline" id="clear" type="reset">清空金額</button><a class="button outline back-results" href="#results">查看試算結果 ↓</a></div>
+    <p class="note" id="example-status" role="status"></p>
+    <noscript><p>請啟用 JavaScript 使用互動試算。</p></noscript>
+    <div id="groups"></div>
+    <div class="actions"><a class="button back-results" href="#results">查看我的燈號 ↓</a></div>
+  </form>
+  <section class="panel result" id="results" aria-labelledby="result-title">
+    <p class="eyebrow">02 · 查看試算</p>
+    <h2 id="result-title">你的現金流燈號</h2>
+    <div class="signal" id="signal" role="status"><b><i class="dot" id="signal-dot" aria-hidden="true"></i><span id="signal-title">等待填寫</span></b><p id="signal-detail">填入每月支出後，這裡會顯示被動收入覆蓋率與燈號。</p></div>
+    <dl class="metrics">
+      <div><dt>每月總收入</dt><dd id="income">—</dd></div>
+      <div><dt>每月總支出</dt><dd id="expenses">—</dd></div>
+      <div class="emphasis"><dt>目前每月結餘</dt><dd id="balance">—</dd></div>
+      <div><dt>停薪後每月結餘</dt><dd id="without-salary">—</dd></div>
+      <div><dt>每月淨被動收入</dt><dd id="passive-income">—</dd></div>
+      <div class="emphasis"><dt>只靠被動收入的每月缺口</dt><dd id="gap">—</dd></div>
+      <div><dt>被動收入覆蓋率</dt><dd id="coverage">—</dd></div>
+    </dl>
+    <progress class="meter" id="meter" aria-label="被動收入支應比例" max="100" value="0"></progress>
+    <details><summary>這些數字怎麼算？</summary><p class="note">停薪後結餘＝總收入扣除薪資、獎金及總支出，保留接案與其他收入。只靠被動收入的缺口也排除接案等工作所得。燈號以淨被動收入 ÷ 總支出計算，門檻為本工具自訂。淨被動收入為負時，覆蓋率以 0% 顯示，虧損仍計入結餘與缺口。試算以本次輸入為準，租金與配息可能波動。</p></details>
+    <div class="cta">
+      <h3>想和保羅所長一起看結果？</h3>
+      <p class="muted">可以先截圖，再到官方 LINE 聊聊你想改善的收支項目。金額只在你的瀏覽器試算。</p>
+      <a class="button line-button" href="https://lin.ee/94wIC8F" target="_blank" rel="noopener noreferrer">加入官方 LINE 諮詢 ↗</a>
+    </div>
+  </section>
+</div>
+</main>
+<footer class="wrap footer">保羅所長 · 房產現金流研究所</footer>
+<script>
+const sections = [
+  ['工作與其他收入', '薪資用全戶實領金額。接案、兼職用扣除成本後的月平均。', 'active', [
+    ['salary', '每月實領薪資', 73000], ['bonus', '年終／獎金月平均', 5000],
+    ['freelance', '接案／兼職淨收入', 3000], ['other-income', '其他收入（補助、扶養款等）', 0]
+  ]],
+  ['被動收入', '股息、利息以近 12 個月實際入帳合計 ÷ 12。出租支出包含出租物件的貸款月付、稅、修繕及管理等，請勿再填入家庭支出。', 'passive', [
+    ['dividends', '股票／ETF 現金股息、配息', 8000], ['rent-income', '房租實收月平均', 28000],
+    ['rental-costs', '出租物件成本月平均', 6000], ['interest', '存款／債券利息', 0],
+    ['other-passive', '其他被動現金收入', 0]
+  ]],
+  ['居住與帳單', '房貸填本金加利息的實際月付額。季節性水電可用過去一年的月平均。', 'expense', [
+    ['housing', '自住房租／房貸', 23000], ['management', '管理費／居家維修', 1800],
+    ['water', '水費', 300], ['electricity', '電費', 1100], ['gas', '瓦斯費', 450],
+    ['mobile', '手機電信費', 1000], ['internet', '家用網路／有線電視', 850]
+  ]],
+  ['三餐與日常', '三餐欄填外食，自己煮的費用填在食材欄。', 'expense', [
+    ['breakfast', '早餐', 1800], ['lunch', '午餐', 4200], ['dinner', '晚餐', 5200],
+    ['groceries', '食材／生鮮採買', 3000], ['drinks', '飲料／點心', 900],
+    ['supplies', '日用品／衣物', 1500], ['leisure', '休閒／訂閱／旅遊', 1800]
+  ]],
+  ['交通、照顧與還款', '稅金、保費、車輛保養及其他年度開銷可換算為月平均。已從薪資扣除的費用免重填。', 'expense', [
+    ['transport', '交通／油資／停車／保養', 2600], ['health', '醫療／藥品／保健', 1000],
+    ['insurance', '保費', 3500], ['education', '托育／教育／才藝', 3200],
+    ['family', '孝親／照顧／寵物', 1600], ['debt', '車貸／信貸／信用卡還款', 0],
+    ['tax', '家庭稅金月平均', 900], ['other-expense', '其他支出／年度費用', 500]
+  ]]
+];
+
+const form = document.getElementById('calculator');
+const fields = document.getElementById('groups');
+const exampleStatus = document.getElementById('example-status');
+const numberFormat = new Intl.NumberFormat('zh-TW');
+const money = value => numberFormat.format(value) + ' 元';
+
+for (const [title, hint, kind, entries] of sections) {
+  const group = document.createElement('fieldset');
+  const hintId = entries[0][0] + '-hint';
+  group.innerHTML = `<legend>${title}</legend><p class="help" id="${hintId}">${hint}</p><div class="fields"></div>`;
+  const row = group.querySelector('.fields');
+  for (const [id, label, example] of entries) {
+    const field = document.createElement('div');
+    field.className = 'field';
+    field.innerHTML = `<label for="${id}">${label}</label><div class="money-input"><span aria-hidden="true">NT$</span><input id="${id}" type="number" inputmode="numeric" min="0" max="999999999" step="1" placeholder="0" autocomplete="off" aria-describedby="${hintId}" data-kind="${id === 'rental-costs' ? 'rental-cost' : kind}" data-example="${example}"></div>`;
+    row.append(field);
+  }
+  fields.append(group);
+}
+
+const inputs = [...form.querySelectorAll('input')];
+const resultIds = ['income', 'expenses', 'balance', 'without-salary', 'passive-income', 'gap', 'coverage'];
+const signal = document.getElementById('signal');
+const signalDot = document.getElementById('signal-dot');
+const signalTitle = document.getElementById('signal-title');
+const signalDetail = document.getElementById('signal-detail');
+const meter = document.getElementById('meter');
+
+function setSignal(color, title, detail) {
+  signal.className = ('signal ' + color).trim();
+  signalDot.className = ('dot ' + color).trim();
+  if (signalTitle.textContent !== title) signalTitle.textContent = title;
+  if (signalDetail.textContent !== detail) signalDetail.textContent = detail;
+}
+
+function showValue(id, text, negative = false) {
+  const output = document.getElementById(id);
+  output.textContent = text;
+  output.classList.toggle('negative', negative);
+}
+
+function update() {
+  const invalid = inputs.some(input => !input.validity.valid);
+  if (invalid || !inputs.some(input => input.value !== '')) {
+    for (const id of resultIds) showValue(id, '—');
+    meter.value = 0;
+    setSignal('', invalid ? '請檢查金額' : '等待填寫', invalid
+      ? '請填 0 至 999,999,999 的整數金額。'
+      : '填入每月支出後，這裡會顯示被動收入覆蓋率與燈號。');
+    return;
+  }
+
+  const sum = kind => inputs.filter(input => input.dataset.kind === kind)
+    .reduce((total, input) => total + Number(input.value), 0);
+  const value = id => Number(document.getElementById(id).value);
+  const passive = sum('passive') - value('rental-costs');
+  const income = sum('active') + passive;
+  const expenses = sum('expense');
+  const balance = income - expenses;
+  const withoutSalary = balance - value('salary') - value('bonus');
+  const gap = Math.max(0, expenses - passive);
+  const coverage = expenses > 0 ? Math.max(0, passive / expenses * 100) : null;
+
+  showValue('income', money(income), income < 0);
+  showValue('expenses', money(expenses));
+  showValue('balance', money(balance), balance < 0);
+  showValue('without-salary', money(withoutSalary), withoutSalary < 0);
+  showValue('passive-income', money(passive), passive < 0);
+  showValue('gap', expenses > 0 ? money(gap) : '—');
+  showValue('coverage', coverage === null ? '—' : numberFormat.format(Math.floor(Math.max(0, passive * 1000 / expenses)) / 10) + '%');
+  meter.value = coverage === null ? 0 : Math.min(100, coverage);
+
+  if (coverage === null) {
+    setSignal('', '等待填寫支出', '至少填一項大於 0 元的支出，就能計算燈號。');
+  } else if (passive >= expenses) {
+    setSignal('green', '綠燈 · 目前可支應全額', '按目前填寫的金額，被動收入足以支應每月開銷。');
+  } else if (passive * 2 >= expenses) {
+    setSignal('yellow', '黃燈 · 已支應一部分', '被動收入可支應至少一半開銷，仍有每月缺口。');
+  } else {
+    setSignal('red', '紅燈 · 高度依賴工作收入', '被動收入支應不到一半開銷，可對照目前結餘與停薪後的差額。');
+  }
+}
+
+form.addEventListener('submit', event => event.preventDefault());
+form.addEventListener('input', update);
+form.addEventListener('reset', () => {
+  exampleStatus.textContent = '';
+  queueMicrotask(update);
+});
+document.getElementById('example').addEventListener('click', () => {
+  if (inputs.some(input => input.value !== '') && !window.confirm('帶入示例會取代目前填寫的金額，確定要繼續嗎？')) return;
+  for (const input of inputs) input.value = input.dataset.example;
+  exampleStatus.textContent = '已帶入一組虛構家庭的金額，你可以直接修改。';
+  update();
+});
+update();
+</script>
+</body>
+</html>
